@@ -1,7 +1,5 @@
-import "./styles.css";
 import React from "react";
 import { ReactPhotoSphereViewer } from "react-photo-sphere-viewer";
-import image from "./images/somePano.JPG";
 
 function App() {
   const photoSphereRef = React.useRef();
@@ -9,7 +7,8 @@ function App() {
     <div className="App">
       <ReactPhotoSphereViewer
         ref={photoSphereRef}
-        src={image}
+        /* defaultZoomLvl will only work with images in the public directory */
+        src={"https://i.ibb.co/23KMzTN/GSAA5125.jpg"}
         defaultZoomLvl={0}
         hideNavbarButton={true}
         width={"100vw"}
